@@ -1,10 +1,10 @@
 let zombie = new Bot("Zombie")
 
 let outfit = new Outfit(zombie) // zombie outfit
-    .body("#0d9436")
-    .torso("#694813")
-    .rightLeg("#694813")
-    .leftLeg("#694813")
+    .body("#698362")
+    .torso("#654321")
+    .rightLeg("#654321")
+    .leftLeg("##654321")
 
 Game.newBot(zombie) // crete the bot instance 
 
@@ -17,11 +17,11 @@ zombie.setInterval(() => {
 
     zombie.setSpeech("BRAAINNNSSS!")  // if there is a player nearby do 
 
-    zombie.moveTowardsPlayer(target, 8) // move to the player
+    zombie.moveTowardsPlayer(target, 1000) // move to the player
 }, 10)
 
 let touchEvent = zombie.touching((p) => { // Bot touches Player
-    Game.messageAll(`[#ff0000]${p.username} was eaten by a zombie!`)
+    Game.messageAll(`[#ff0000]${p.username} Imagine dying to a zombie`)
     // p.kill() to kill a player intantly 
    // p.setHealth(p.health-5) to reduce the player health by 5
 })
