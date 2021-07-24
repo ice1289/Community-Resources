@@ -17,11 +17,11 @@ zombie.setInterval(() => {
 
     zombie.setSpeech("BRAAINNNSSS!")  // if there is a player nearby do 
 
-    zombie.moveTowardsPlayer(target, 8) // move to the player
-}, 10)
+    zombie.moveTowardsPlayer(target, 1000) // move to the player
+}, 1000)
 
 let touchEvent = zombie.touching((p) => { // Bot touches Player
     Game.messageAll(`[#ff0000]${p.username} was eaten by a zombie!`)
     // p.kill() to kill a player intantly 
-   // p.setHealth(p.health-5) to reduce the player health by 5
+   // p.setHealth(p.health-10) to reduce the player health by 5
 })
